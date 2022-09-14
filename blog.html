@@ -29,7 +29,7 @@
 
     <!-- main section start -->
     <main>
-        <div class="accordion w-75 m-auto mt-5" id="accordionExample">
+        <div class="accordion w-75 mx-auto mt-5" id="accordionExample">
             <div class="accordion-item bg-dark text-white">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button bg-secondary text-white border-0 fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -38,8 +38,8 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body fs-4">
-                    Session storage is similar to Local storage. The main difference is that while data in local storage doesn't expire, data in session storage is cleared when the page session ends. Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab.
-                    <br><br>
+                    <p>Session storage is similar to Local storage. The main difference is that while data in local storage doesn't expire, data in session storage is cleared when the page session ends. Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab.</p>
+                    <br>
                     <table class="table table-dark table-striped">
                         <thead>
                           <tr>
@@ -86,20 +86,33 @@
             </div>
             <div class="accordion-item bg-dark text-white">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button bg-secondary text-white border-0 fs-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button bg-secondary text-white fs-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     what is the difference between global scope and block scope ?
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body fs-4">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <p><strong class="text-decoration-underline">Global Scope:</strong> A variable exists inside or outside a block. If a variable is declared outside all functions or curly braces ({}), it exists in the global scope. The global variables can be accessed by any line of code in the program, including inside blocks.</p><br>
+                  <div class="w-50 mx-auto">
+                    <img class="rounded-5" src="./image-01.png" alt="">
+                  </div>
+                  <p><strong class="text-decoration-underline">Block Scope:</strong> If you were to define some variables inside curly brackets {} or inside a specific function then those variables are called local variables The local variables have a very confined scope which is called the local scope.<br>
+                    <div class="w-50 mx-auto">
+                        <img class="rounded-5" src="./image-01.png" alt="">
+                    </div><br>
+                    But, with the release of ES6, the local scope was further broken down into two different scopes:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Function scope<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Block scope.<br><br>
+                    The function scope is the accessibility of the variables defined inside a function, these variables cannot be accessed from any other function or even outside the function in the main file. <br><br>
+                    Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.
+                </p><br>
                 </div>
               </div>
             </div>
             <div class="accordion-item bg-dark text-white">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button bg-secondary text-white border-0 fs-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Accordion Item #3
+                    How to work event loop in javascript?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
