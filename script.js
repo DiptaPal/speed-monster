@@ -139,9 +139,3 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
-
-window.addEventListener('keydown', function(e) {
-  if(e.key == 32 && e.target == document.body) {
-    e.preventDefault();
-  }
-});
