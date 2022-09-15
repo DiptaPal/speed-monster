@@ -6,41 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speed Monster</title>
     <link rel="icon" type="image/x-icon" href="./images/BD News Online.png">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+
     <!-- Bootstrap link up -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- CSS stylesheet link up -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./blog.css">
 
 </head>
 <body>
     <!-- navbar section start -->
-    <nav class="navbar bg-secondary">
-        <div class="container-fluid fw-semibold text-light">
-            <a href="#" class="navbar-brand text-light bg-dark px-3 py-2 rounded-3">Speed Monster</a>
-            <div class="d-flex pe-3">
-                <a class="nav-link active  pe-4" href="./index.html">Home</a>
-                <a class="nav-link active" href="./blog.html">Blog</a>
+    <nav class="nav-container">
+        <div class="nav-body">
+            <a href="#" class="nav-title">Speed Monster</a>
+            <div class="nav-btn">
+                <a class="nav-option" href="./index.html">Home</a>
+                <a class="nav-option" href="./blog.html">Blog</a>
             </div>
         </div>
-      </nav>
+    </nav>
     <!-- navbar section end -->
 
     <!-- main section start -->
     <main>
         <div class="accordion w-75 mx-auto my-5" id="accordionExample">
-            <div class="accordion-item bg-dark text-white">
+            <div class="accordion-item bg-transparent text-white">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button bg-secondary text-white pt-4 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button bg-secondary text-white border-0 fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     What is the difference between local storage and session storage ?
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body overflow-scroll">
+                <div class="accordion-body overflow-scroll fs-4">
                     <p>Session storage is similar to Local storage. The main difference is that while data in local storage doesn't expire, data in session storage is cleared when the page session ends. Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab.</p>
                     <br>
                     <table class="table table-dark table-striped">
@@ -87,94 +84,132 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item bg-dark text-white">
+            <div class="accordion-item bg-transparent text-white">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button bg-secondary text-white collapsed py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button bg-secondary text-white collapsed fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     What is the difference between global scope and block scope ?
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+                <div class="accordion-body fs-4">
                   <p><strong class="text-decoration-underline">Global Scope:</strong> A variable exists inside or outside a block. If a variable is declared outside all functions or curly braces ({}), it exists in the global scope. The global variables can be accessed by any line of code in the program, including inside blocks.</p><br>
-                  <div class="w-50 mx-auto">
-                    <img class="rounded-5 img-fluid" src="./image-01.png" alt="">
+                  <div class="bg-secondary rounded-2 p-4 w-75 mx-auto">
+                    <code class="text-white">
+                      var dogSound = "woof";<br>
+                      const animalSound = () => {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(dogSound); // woof <br>
+                      }; <br>
+                      animalSound(); <br>
+                      console.log(dogSound); // woof <br>
+                    </code>
                   </div><br>
-                  <p><strong class="text-decoration-underline">Block Scope:</strong> If you were to define some variables inside curly brackets {} or inside a specific function then those variables are called local variables The local variables have a very confined scope which is called the local scope.<br>
-                    <div class="w-50 mx-auto">
-                        <img class="rounded-5 img-fluid" src="./image-01.png" alt="">
-                    </div><br>
-                    But, with the release of ES6, the local scope was further broken down into two different scopes:<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Function scope<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Block scope.<br><br>
-                    The function scope is the accessibility of the variables defined inside a function, these variables cannot be accessed from any other function or even outside the function in the main file. <br><br>
-                    Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.
+                  <p><strong class="text-decoration-underline">Block Scope:</strong> If you were to define some variables inside curly brackets {} or inside a specific function then those variables are called local variables The local variables have a very confined scope which is called the local scope.<br><br>
+                  <div class="bg-secondary rounded-2 p-4 w-100 mx-auto">
+                    <code class="text-white">
+                      // the block statement 'if' doesn't create a new scope <br>
+                      if (true) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; var catSound = 'Meow'// catSound is still in the global scope<br>
+                      }; <br>
+                      console.log(catSound); // 'Meow' <br>
+                    </code>
+                  </div><br>
+                  ES6 introduced block scope by using the let and const keywords. These two keywords are scoped within the block which are defined. <br><br>
+                  <div class="bg-secondary rounded-2 p-4 w-100 mx-auto">
+                    <code class="text-white">
+                      // the block statement 'if' doesn't create a new scope <br>
+                      if (true) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; var catSound = 'Meow'// catSound is still in the global scope<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; const  catName = 'Patsy'// <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; let catSuperheroName = 'Hellcat'// <br>
+                      }; <br>
+                      console.log(catSound); // 'Meow' <br>
+                      console.log(catSound); // ReferenceError <br>
+                      console.log(catSound); // ReferenceError <br>
+                    </code>
+                  </div><br>
+                  But, with the release of ES6, the local scope was further broken down into two different scopes:<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Function scope<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Block scope.<br><br>
+                  The function scope is the accessibility of the variables defined inside a function, these variables cannot be accessed from any other function or even outside the function in the main file. <br><br>
+
+                  Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.
                 </p><br>
                 </div>
               </div>
             </div>
-            <div class="accordion-item bg-dark text-white">
+            <div class="accordion-item bg-transparent text-white">
               <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button bg-secondary text-white border-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button class="accordion-button bg-secondary text-white border-0 collapsed fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     How does work event loop in javascript?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+                <div class="accordion-body fs-4 ">
                   <p>The event loop is a constantly running process that monitors both the callback queue and the call stack. If the call stack is not empty, the event loop waits until it is empty and places the next function from the callback queue to the call stack. The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.</p>
                 </div>
               </div>
             </div>
-            <div class="accordion-item bg-dark text-white">
+            <div class="accordion-item bg-transparent text-white">
               <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button bg-secondary text-white border-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <button class="accordion-button bg-secondary text-white border-0 collapsed fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                     How many ways can we get undefined ?
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <p><strong>The undefined property indicates that a variable has not been assigned a value, or not declared at all.</strong><br>
+                <div class="accordion-body fs-4">
+                  <p><strong>The undefined property indicates that a variable has not been assigned a value, or not declared at all. Many ways we can get undefined. Some of given below:-</strong><br>
                     <strong class="text-decoration-underline">Uninitialized variable:</strong> "A declared variable but not yet assigned with a value (uninitialized) is by default undefined."<br>
-                    <code>
+                    <div class="bg-secondary rounded-2 w-50 p-4 mx-auto">
+                      <code class="text-white">
                         let myVariable;<br>
                         myVariable; // => undefined
-                    </code>
+                      </code>
+                    </div>
                   </p>
                   <p>
                     <strong class="text-decoration-underline">Accessing a non-existing property:</strong> "When accessing a non-existing object property, JavaScript returns undefined."<br>
-                    <code>
+                    <div class="bg-secondary rounded-2 w-50 p-4 mx-auto">
+                      <code class="text-white">
                         let favoriteMovie = {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;title: 'Blade Runner'<br>
                           };<br>
                         favoriteMovie.actors; // => undefined<br>
-                    </code>
+                      </code>
+                    </div>
                   </p>
                   <p>
                     <strong class="text-decoration-underline">Function parameters:</strong> "The function parameters implicitly default to undefined."<br>
-                    <code>
+                    <div class="bg-secondary rounded-2 w-50 p-4 mx-auto">
+                      <code class="text-white">
                         function multiply(a, b) {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp; a; // => 5<br>
                             &nbsp;&nbsp;&nbsp;&nbsp; b; // => undefined<br>
                             &nbsp;&nbsp;&nbsp;&nbsp; return a * b;<br>
                           }
                         multiply(5); // => NaN<br>
-                    </code>
+                      </code>
+                    </div>
                   </p>
                   <p>
                     <strong class="text-decoration-underline">Function return value:</strong> "Implicitly, without return statement, a JavaScript function returns undefined."<br>
-                    <code>
+                    <div class="bg-secondary rounded-2 w-50 p-4 mx-auto">
+                      <code class="text-white">
                         function square(x) {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp; const res = x * x;<br>
                           }<br>
                         square(2); // => undefined<br>
-                    </code>
+                      </code>
+                    </div>
                   </p>
                   <p>
                     <strong class="text-decoration-underline">undefined in arrays:</strong> "We get undefined when accessing an array element with an out of bounds index."<br>
-                    <code>
+                    <div class="bg-secondary rounded-2 w-75 p-4 mx-auto">
+                      <code class="text-white">
                         const colors = ['blue', 'white', 'red'];<br>
                         colors[5];  // => undefined <br>
                         colors[-1]; // => undefined <br>
-                    </code>
+                      </code>
+                    </div>
                   </p>
                   <p>Also: <br>
                     # access the property that doesn't exist on  an object will give you undefined <br>

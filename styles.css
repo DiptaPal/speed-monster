@@ -16,6 +16,50 @@ body {
   margin: 0 auto;
 }
 
+/* navbar style start */
+.nav-container{
+  background-color: #6c757d;
+  padding: 15px 75px;
+}
+.nav-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-title{
+  text-decoration: none;
+  font-size: 26px;
+  color: white;
+  background-color: black;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+.nav-title:hover{
+  background-color: white;
+  color: black;
+  transition: 0.8s;
+}
+.nav-btn{
+  text-align: center;
+}
+.nav-option{
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.nav-option:hover{
+  color: black;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+/* navbar style end */
+
 #question {
   min-height: 100px;
   display: flex;
@@ -33,12 +77,14 @@ body {
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
   padding: 20px;
+  text-align: center;
 }
 
 #display {
   min-height: 100px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   padding-left: 5rem;
   color: white;
@@ -189,6 +235,15 @@ button {
 
 /* responsive for phone device*/
 @media only screen and (max-width: 576px) {
+  .nav-body{
+    flex-direction: column;
+  }
+  .nav-btn{
+      margin-top: 10px;
+  }
+  .nav-option{
+      margin: 10px;
+  }
   .box-container {
     padding: 0 20px;
     width: 100%;
