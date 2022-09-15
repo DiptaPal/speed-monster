@@ -37,7 +37,7 @@
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body overflow-scroll fs-4">
+                <div class="accordion-body overflow-auto fs-4">
                     <p>Session storage is similar to Local storage. The main difference is that while data in local storage doesn't expire, data in session storage is cleared when the page session ends. Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab.</p>
                     <br>
                     <table class="table table-dark table-striped">
@@ -93,7 +93,7 @@
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body fs-4">
                   <p><strong class="text-decoration-underline">Global Scope:</strong> A variable exists inside or outside a block. If a variable is declared outside all functions or curly braces ({}), it exists in the global scope. The global variables can be accessed by any line of code in the program, including inside blocks.</p><br>
-                  <div class="bg-secondary rounded-2 p-4 w-75 mx-auto">
+                  <div class="bg-secondary rounded-2 p-4 w-100 mx-auto">
                     <code class="text-white">
                       var dogSound = "woof";<br>
                       const animalSound = () => {<br>
@@ -159,7 +159,7 @@
                 <div class="accordion-body fs-4">
                   <p><strong>The undefined property indicates that a variable has not been assigned a value, or not declared at all. Many ways we can get undefined. Some of given below:-</strong><br>
                     <strong class="text-decoration-underline">Uninitialized variable:</strong> "A declared variable but not yet assigned with a value (uninitialized) is by default undefined."<br>
-                    <div class="bg-secondary rounded-2 w-50 p-4 mx-auto">
+                    <div class="bg-secondary rounded-2 w-100 p-4 mx-auto">
                       <code class="text-white">
                         let myVariable;<br>
                         myVariable; // => undefined
@@ -168,7 +168,7 @@
                   </p>
                   <p>
                     <strong class="text-decoration-underline">Accessing a non-existing property:</strong> "When accessing a non-existing object property, JavaScript returns undefined."<br>
-                    <div class="bg-secondary rounded-2 w-50 p-4 mx-auto">
+                    <div class="bg-secondary rounded-2 w-100 p-4 mx-auto">
                       <code class="text-white">
                         let favoriteMovie = {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;title: 'Blade Runner'<br>
@@ -179,7 +179,7 @@
                   </p>
                   <p>
                     <strong class="text-decoration-underline">Function parameters:</strong> "The function parameters implicitly default to undefined."<br>
-                    <div class="bg-secondary rounded-2 w-50 p-4 mx-auto">
+                    <div class="bg-secondary rounded-2 w-100 p-4 mx-auto">
                       <code class="text-white">
                         function multiply(a, b) {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp; a; // => 5<br>
@@ -192,7 +192,7 @@
                   </p>
                   <p>
                     <strong class="text-decoration-underline">Function return value:</strong> "Implicitly, without return statement, a JavaScript function returns undefined."<br>
-                    <div class="bg-secondary rounded-2 w-50 p-4 mx-auto">
+                    <div class="bg-secondary rounded-2 w-100 p-4 mx-auto">
                       <code class="text-white">
                         function square(x) {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp; const res = x * x;<br>
@@ -203,7 +203,7 @@
                   </p>
                   <p>
                     <strong class="text-decoration-underline">undefined in arrays:</strong> "We get undefined when accessing an array element with an out of bounds index."<br>
-                    <div class="bg-secondary rounded-2 w-75 p-4 mx-auto">
+                    <div class="bg-secondary rounded-2 w-100 p-4 mx-auto">
                       <code class="text-white">
                         const colors = ['blue', 'white', 'red'];<br>
                         colors[5];  // => undefined <br>
